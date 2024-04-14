@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../src/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+    <script defer src="../src/js/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <!-- ionicon cdn link  -->
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- swiper library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <header class="header" id="header">
+        <nav class="header-nav">
+        <img src="../public/images/logo.jpg" alt="main logo " class="header-nav-img">
+            <ul class="header-nav-ul">
+                <li><a href="#home" class="nav-link home-link">Home</a></li>
+                <li><a href="#footer" class="nav-link about-link">About</a></li>
+                <li><a href="#resume" class="nav-link resume-link">Resume</a></li>
+                <li><a href="#latest-work" class="nav-link projects-link">Projects</a></li>
+                <li><a href="#contacts" class="nav-link contacts-link">Contacts</a></li>
+            </ul>
+            <button class="btn-toggle" data-bs-target="#sidebar" data-bs-toggle="offcanvas"><ion-icon name="menu-outline" class="nav-link justify-link" ></ion-icon></button>
+        </nav>
+    </header>
+
+    <div class="offcanvas offcanvas-start" id="sidebar">
+        <div class="offcanvas-header">
+                <button class="btn btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="offcanvas-links">
+                <span><li><a href="#home" class="nav-link home-link"> <ion-icon name="home-outline"></ion-icon> Home</a></li></span>
+                <span><li><a href="#footer" class="nav-link about-link"><ion-icon name="person-circle-outline"></ion-icon> About</a></li></span>
+                <span><li></ion-icon><a href="#resume" class="nav-link resume-link"> <ion-icon name="newspaper-outline"></ion-icon> Resume</a></li></span>
+                <span><li><a href="#latest-work" class="nav-link projects-link"> <ion-icon name="apps-outline"></ion-icon> Projects</a></li></span>
+                <span><li><a href="#contacts" class="nav-link contacts-link"> <ion-icon name="person-add-outline"></ion-icon> Contacts</a></li></span>
+           </ul>
+        </div>
+
+    </div>
+<!-- ************************************
+ Hero starts here
+************************************  -->
+
+<main id="home">   
+<section class="section section-hero ">
+   <div class="container grid grid-two-columns">
+    <div class="section-hero-about">
+        <p> Who i'm ?</p>
+        <h1>Mukesh Gouda</h1>
+        <p>Hi guys this is Mukesh Gouda Im a fullstack web Developer,<br> im very very curious about learning new things and experience challenges</p>
+      <button class="btn btn-primary" id="btnHero" data-bs-target="#contacts" style="width: 50%;font-size:1.3vw ;">CONTACT ME</button>
+        <!-- <button  >CONTACT ME</button> -->
+    </div>
+    <div class="section-hero-img">
+        <img src="../public/images/img1.jpg" alt="user image" class="userImg" loading="lazy">
+    </div>
+   </div>
+</section>
+</main>
+
+<!-- ************************************
+ Bio Data starts here
+************************************  -->
+
+<section class="section-hero section" id="bio-data">
+    <div class="container grid grid-two-columns">
+        <div class="section-bio-img">
+            <img src="../public/images/img3.jpeg" alt="user image"  loading="lazy">
+        </div>
+        <div class="section-bio-data">
+            <h2 class="common-heading">My Bio-Data</h2>
+            <p>Hi Guys here are  some  highlights of my skills </p>
+         <div class="bio-data-status">
+            <div class="bio-status">
+                <h5 class="bio-heading">javascript</h5>
+                <div class="bio-progress-bar ">
+                    <div class="progress-bar-1"></div>
+                </div>
+                <span  class="bar-1">80%</span>
+            </div>
+            <div class="bio-status">
+                <h5 class="bio-heading">HTML</h5>
+                <div class="bio-progress-bar ">
+                    <div class="progress-bar-2"></div>
+                </div>
+                <span class="bar-2">85%</span>
+            </div>
+            <div class="bio-status">
+                <h5 class="bio-heading">CSS</h5>
+                <div class="bio-progress-bar ">
+                    <div class="progress-bar-3"></div>
+                </div>
+                <span class="bar-3">90%</span>
+            </div>
+            <div class="bio-status">
+                <h5 class="bio-heading">Java</h5>
+                <div class="bio-progress-bar">
+                    <div class="progress-bar-4"></div>
+                </div>
+                <span class="bar-4">99%</span>
+            </div>
+        </div>
+                <button class="btn btn-primary " style="width: 50%;font-size:1.3vw ;">Contact me</button>
+    </div>
+   </div>
+</section>
+
+<!-- /* ************************************
+portfolio section starts here
+************************************ */ -->
+
+<section class=" section section-portfolio section" id="latest-work">
+        <div class="container ">
+            <div>
+                <h2 class="common-heading">Latest Work</h2>
+            </div>
+        </div>
+        <div class="portfolio-btns">
+            <div>
+                <button class="btn btn-primary p-btn" data-btn-num="1">Games</button>
+                <button class="btn btn-primary p-btn" data-btn-num="2">Website</button>
+                <button class="btn btn-primary p-btn" data-btn-num="3">Designs</button>
+            </div>
+        </div>
+        
+        <div class="portfolio grid grid-three-columns portfolio-images" id="portfolio-images">
+
+                <div class="img-overlays p-btn--1">
+                    <img src="../public/images/pro1.jfif" alt="project image" class="p-images" loading="lazy">
+                    <div class="overlay">
+                        <a href="https://itmukesh-16.github.io/Tic_Tac_Toe/" target="_blank" class="common-heading">TicTacToe</a>
+                    </div>
+                </div>
+                <div class="img-overlays p-btn--1">
+                    <img src="../public/images/pro2.jfif" alt="project image" class="p-images" loading="lazy">
+                    <div class="overlay">
+                        <a href="https://itmukesh-16.github.io/ToDoList/" target="_blank" class="common-heading">ToDoList</a>
+                    </div>
+                </div>
+                <div class="img-overlays p-btn--2">
+                    <img src="../public/images/logo.jpg" alt="project image" class="p-images" loading="lazy">
+                    <div class="overlay">
+                        <a href="#" class="common-heading">Porfolio</a>
+                    </div>
+                </div>
+                <div class="img-overlays p-btn--3">
+                    <img src="../public/images/imgUser.jpeg" alt="project image" class="p-images" loading="lazy">
+                    <div class="overlay">
+                        <a href="#" class="common-heading">project</a>
+                    </div>
+                </div>
+                <div class="img-overlays p-btn--3">
+                    <img src="../public/images/mukesh.jpg" alt="project image" class="p-images" loading="lazy">
+                    <div class="overlay">
+                        <a href="#" class="common-heading">project</a>
+                    </div>
+                </div>
+                <div class="img-overlays p-btn--3">
+                    <img src="../public/images/mukesh.jpg" alt="project image" class="p-images" loading="lazy">
+                    <div class="overlay">
+                        <a href="#" class="common-heading">project</a>
+                    </div>
+                </div>        
+        </div>
+    </section>
+
+<!-- /* ************************************
+work data  section starts here
+************************************ */ -->
+
+<section class="section section-work-data" >
+    <div class=" grid grid-four-columns ">
+        <div>
+            <h2 class="counter-number" data-number="3000">2+</h2>
+            <p>Happy Clients</p>
+        </div>
+        <div>
+            <h2 class="counter-number" data-number="5000">3+</h2>
+            <p>Success</p>
+        </div>
+        <div>
+            <h2 class="counter-number" data-number="8000">3+</h2>
+            <p>Project Done</p>
+        </div>
+        <div>
+            <h2 class="counter-number" data-number="7777">10+</h2>
+            <p>Cup of Coffee</p>
+        </div>
+    </div>
+</section>
+
+<!-- /* ************************************
+our skillsets/services  section starts here
+************************************ */ -->
+
+<section class="section section-services" id="services">
+    <div class="container">
+        <div>
+            <h2 class="common-heading">Skill Sets</h2>
+        <p>   </p>
+        </div>
+    </div>
+     <!-- services offers card  -->
+    <div class=" grid grid-three-columns">
+            <div class="service-box">
+                <ion-icon name="desktop-outline" class="service-icon"></ion-icon>
+                <h2>web Developer</h2>
+                <p> Im  very curious to learn and develope web appliication , as creating new things is my passion</p>
+            </div>
+            <div class="service-box">
+                <ion-icon name="logo-android" class="service-icon"></ion-icon>
+                <h2>android developer</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptates rem, 
+                consectetur neque modi expedita quaerat labore corporis ipsum consequuntur!</p>
+            </div>
+            <div class="service-box">
+                <ion-icon name="phone-portrait-sharp" class="service-icon"></ion-icon>
+                <h2>mobile</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptates rem, 
+                consectetur neque modi expedita quaerat labore corporis ipsum consequuntur!</p>
+            </div>
+            <div class="service-box">
+                <ion-icon name="logo-youtube" class="service-icon"></ion-icon>
+                <h2>GitHub</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptates rem, 
+                consectetur neque modi expedita quaerat labore corporis ipsum consequuntur!</p>
+            </div>
+            <div class="service-box">
+                <ion-icon name="cloud-upload-outline" class="service-icon"></ion-icon>
+                <h2>cloud computing</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptates rem, 
+                consectetur neque modi expedita quaerat labore corporis ipsum consequuntur!</p>
+            </div>
+            <div class="service-box">
+                <ion-icon name="analytics-outline" class="service-icon"></ion-icon>
+                <h2>data science</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptates rem, 
+                consectetur neque modi expedita quaerat labore corporis ipsum consequuntur!</p>
+            </div>
+    </div>
+
+</section>
+
+<!-- /* ************************************
+education/resume section starts here
+************************************ */ -->
+
+<section class="section section-education" id="resume">
+
+    <div class="education  grid grid-two-columns">
+        <div class="education section-bio-img">
+            <img src="../public/images/img2.jpg" alt="user image" loading="lazy" >
+        </div>
+        <div class="education-data">
+            <div class="container ">
+                <h2 class="common-heading">Resume</h2>
+            </div>
+            <div class="education-experience">
+                <div>
+                    <div>
+                        <h2>MCA</h2>
+                    <p>G.A.T.E</p>
+                    </div>
+                    <div>
+                        <h2>Regular</h2>
+                        <p>2025</p>
+                    </div>
+                </div>
+            </div>
+            <div class="education-experience">
+                <div>
+                    <div>
+                        <h2>BCA</h2>
+                    <p>Imperial College</p>
+                    </div>
+                    <div>
+                        <h2>Regular </h2>
+                        <p>2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="education-experience">
+                <div>
+                    <div>
+                        <h2>+2 Intermediate</h2>
+                    <p>Binayak Acharya Jr. College</p>
+                    </div>
+                    <div>
+                        <h2>Regular </h2>
+                        <p>2020</p>
+                    </div>
+                </div>
+            </div>
+            <div class="education-experience">
+                <div>
+                    <div>
+                        <h2>Matriculation</h2>
+                    <p>L.N.B.P High School</p>
+                    </div>
+                    <div>
+                        <h2>Regular </h2>
+                        <p>2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+    </section>
+
+<!-- /* ************************************
+our testimonial section starts here
+************************************ */ -->
+
+<section class="section section-testimonial" id="testimonials">
+    <div class="container">
+      <h2 class="common-heading">testimonial</h2>
+    </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                 <div class="swaper-client-review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                         Officia praesentium excepturi recusandae voluptas magnam!</p>
+                 </div>
+                 <div class="swaper-client-data grid grid-two-columns">
+                    <div>
+                        <figure>
+                            <img src="../public/images/mukesh.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="swaper-client-data-name">
+                    <p>mukesh gouda <br></p>
+                    </div>
+                 </div>
+            </div>
+                <div class="swiper-slide">
+                    <div class="swaper-client-review">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Officia praesentium excepturi recusandae voluptas magnam!</p>
+                    </div>
+                    <div class="swaper-client-data grid grid-two-columns">
+                        <div>
+                            <figure>
+                                <img src="../public/images/img1.jpg" alt="">
+                            </figure>
+                        </div>
+                        <div class="swaper-client-data-name">
+                        <p>mukesh gouda <br></p>
+                        </div>
+                    </div>
+                </div>
+              <div class="swiper-slide">
+                 <div class="swaper-client-review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                         Officia praesentium excepturi recusandae voluptas magnam!</p>
+                 </div>
+                 <div class="swaper-client-data grid grid-two-columns">
+                    <div>
+                        <figure>
+                            <img src="../public/images/img2.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="swaper-client-data-name">
+                    <p>mukesh gouda <br></p>
+                    </div>
+                 </div>
+            </div>
+              <div class="swiper-slide">
+                 <div class="swaper-client-review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                         Officia praesentium excepturi recusandae voluptas magnam!</p>
+                 </div>
+                 <div class="swaper-client-data grid grid-two-columns">
+                    <div>
+                        <figure>
+                            <img src="../public/images/img3.jpeg" alt="">
+                        </figure>
+                    </div>
+                    <div class="swaper-client-data-name">
+                    <p>mukesh gouda <br></p>
+                    </div>
+                 </div>
+            </div>
+              <div class="swiper-slide">
+                 <div class="swaper-client-review">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                         Officia praesentium excepturi recusandae voluptas magnam!</p>
+                 </div>
+                 <div class="swaper-client-data grid grid-two-columns">
+                    <div>
+                        <figure>
+                            <img src="../public/images/img4.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="swaper-client-data-name">
+                    <p>mukesh gouda <br></p>
+                    </div>
+                 </div>
+            </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+</section>
+<!-- /* ************************************
+freelancing  section starts here
+************************************ */ -->
+<section class="section section-freelancing" >
+        <div class="section-freelancing-overlay">    
+              
+        </div>
+        <div class="section-freelancing-container">
+            <h2>Im <span>available </span> for Freelancing</h2>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
+            <a href="#" class="btn btn-primary">Hire me</a>
+        </div>
+  
+</section>
+
+<!-- /* ************************************
+contact section starts here
+************************************ */ -->
+
+<section class="section section-contact" id="contacts">
+    <div class="container ">
+        <h2 class="common-heading"> Get-In-Touch</h2>
+    </div>
+    <div class="section-contact-main grid grid-two-columns">
+
+        <div class="contact-map section-bio-img">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1330.8857131830166!2d84.73421714269145!3d19.355584417159413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3d4e56134d60e7%3A0xa6716fa274f353e!2sBalakrushnapur%2C%20Odisha%20760002!5e0!3m2!1sen!2sin!4v1712848050102!5m2!1sen!2sin" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+       <div>
+        <form  action="https://formspree.io/f/xbjnpzgq" method="POST" name="contactForm">
+            <div>
+             <input type="text" name="userName" id="userName" placeholder="Name"  class="form-control" required autocomplete="off">
+            </div>
+            <div>
+                <input type="email" name="userEmail" id="userEmail" placeholder="e.i xyz@gmail.com" class="form-control" required autocomplete="off">
+            </div>
+            <div>
+             <input type="text" name="subject" id="subject" placeholder="Subject" class="form-control" required autocomplete="off">
+            </div>
+            <div>
+             <textarea name="textArea" id="textArea" placeholder="Drop Your Thoughts" cols="20" rows="10" class="form-control" required autocomplete="off"></textarea>
+            </div>
+            <div>
+             <button type="submit" class="btn btn-primary" name="submit" id="submit">Submit</button>
+            </div>
+         </form>
+       </div>
+    </div>
+</section>
+
+<!-- /* ************************************
+footer section starts here
+************************************ */ -->
+<footer class="section section-footer" id="footer">
+        <div class=" grid grid-four-columns">
+            <div class="f-about f-sec">
+                <h4>about</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing eveniet!</p>
+            </div>
+            <!-- end of f-about block  -->
+
+            <div class="f-links f-sec">
+                <h4>links</h4>
+                    <p><span><a href="#home"><ion-icon name="arrow-forward-outline">  </ion-icon>  Home</a></span><p>
+                    <p><span><a href="#bio-data"><ion-icon name="arrow-forward-outline">  </ion-icon> Bio Data</a></span><p>
+                    <p><span><a href="#latest-work"><ion-icon name="arrow-forward-outline">  </ion-icon> Latest Work</a></span><p>
+                    <p><span><a href="#services"><ion-icon name="arrow-forward-outline">  </ion-icon> Services</a></span><p>
+                    <p><span><a href="#resume"><ion-icon name="arrow-forward-outline">  </ion-icon> Resume</a></span><p>
+                    <p><span><a href="#contacts"><ion-icon name="arrow-forward-outline">  </ion-icon> Contacts</a></span><p>
+            </div>
+
+            <!-- end of f-links block  -->
+
+            <div class="f-services f-sec">
+                <h4>services</h4>
+                
+                    <p><span><a href="#"><ion-icon name="globe-outline"></ion-icon> web Design</a></span></p>
+                    <p><span><a href="#"><ion-icon name="phone-portrait-sharp"></ion-icon> App development</a></span></p>
+            </div>
+
+            <div class="f-questions f-sec">
+                <h4>Questions</h4>
+            <address>
+                <p><span><ion-icon name="location-outline"></ion-icon></span> <a href="#"> Berhampur,India</a></p>
+            <p><span><ion-icon name="call-outline"></ion-icon></span> <a href="tel:+917847830904">91+ 7847830904 </a></p>
+            <p><span><ion-icon name="mail-outline"></ion-icon></span> <a href="mailto:itsmukeshgouda@gmail.com">itsmukeshgouda@gmail.com </a></p>
+            </address>
+            </div>
+        </div>
+        <!-- footer contact section ends  -->
+        
+        <div class="f-icons">
+            <div class="icon-box">
+                <span class="service-icon"><a href="#"></ion-icon><ion-icon name="logo-instagram"></ion-icon></a></span>
+            </div>
+            <div  class="icon-box">
+                <span class="service-icon"><a href="#"></ion-icon><ion-icon name="logo-facebook"></ion-icon></a></span>
+            </div>
+            <div class="icon-box">
+                <span class="service-icon"><a href="#"></ion-icon><ion-icon name="logo-github"></ion-icon></a></span>
+            </div >
+            <div class="icon-box">
+                <span class="service-icon"><a href="#"></ion-icon><ion-icon name="logo-linkedin"></ion-icon></a></span>
+            </div>
+        </div>
+
+        <!-- icon section end  -->
+
+        <div class="f-credits">
+            <p>This Website is Made By ❤ Mukesh Gouda | All Copyrights are reserved ©2024 </p>
+        </div>
+</footer>
+
+</body>
+ <!-- jquery cdn  -->
+ <script src="../node_modules/jquery/dist/jquery.js"></script>
+ <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+ <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+<!-- for swriper library  -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</html>

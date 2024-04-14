@@ -1,0 +1,168 @@
+body {
+  font-family: arial;
+  padding: 0;
+  margin: 0;
+}
+
+/* header starts here  */
+header {
+  background-color: black;
+}
+header img {
+  height: 5vmax;
+  width: 5vmax;
+  border-radius: 50px;
+}
+nav {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5em;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 2vw;
+  font-weight: 800;
+}
+nav a:hover {
+  color: yellow;
+}
+.bi-justify {
+  display: none;
+}
+#name {
+  color: white;
+  font-size: 2vmax;
+}
+nav .bi-justify {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#resume {
+  background-color: red;
+  padding: 3px;
+  border-radius: 5px;
+  color: black;
+}
+@media (max-width: 900px) {
+  header img {
+    height: 9vmax;
+    width: 9vmax;
+    border-radius: 50px;
+  }
+  nav {
+    justify-content: space-around;
+  }
+  #name {
+    display: none;
+  }
+  .resume {
+    display: none;
+  }
+  nav ul {
+    display: none;
+  }
+  .bi-justify {
+    display: block;
+    width: 6vw;
+    background-color: black;
+    color: aliceblue;
+    font-size: 8vw;
+  }
+  #resume {
+    display: none;
+  }
+}
+/* container starts here  */
+
+.container {
+  width: 100vmax;
+  height: 100vmin;
+  display:grid;
+  grid-template-columns: 5.5fr 5.5fr 1fr;
+
+}
+.d1{
+  background-color: #62DAC9 ;
+  height: 100%;
+  width: 100%;
+  background-image: url("/public/images/imgUser.jpeg");
+  background-size: 100% 100%;
+  /* position: fixed; */
+}
+.d2{
+  background-color: #373B40;
+  height: 200%;
+  width: 100%;
+  border-right: 1px solid gray;
+  /* position: absolute; */
+  color: white;
+}
+.d3{
+  background-color: #373B40;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  justify-content:center;
+  font-size: 2.5vw;
+  color: #62DAC9;
+  
+}
+.d3 a{
+  color: inherit;
+}
+
+.name,.about,.myprojects{
+  height: calc(100%-15%);
+  border-bottom: 1px solid gray;
+  /* background-color:; */
+  font-size: 1.5vw;
+}
+.subdiv1{
+  height: calc(100%-20%);
+  padding: 2em 2em;
+  width: 100%;
+  background-color: red;
+}
+.subdiv2{
+  padding: 2em;
+}
+.myprojects{
+  padding: 1em;
+  padding: 1vw;
+}
+.card{
+  height:6%;
+  width: 13%;
+}
+#carouselExampleControls{
+  width: 100vmax;
+  height: 70%;
+  border: 1px solid gray;
+  padding: 5vw;
+}
+.myp-subd1{
+  height: 30vmax;
+  width: 50vmax;
+  display: flex;
+}
+@media (max-width:600px){
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+}
+#p1{
+  font-size: 3vw;
+  font-weight: bolder;
+}
