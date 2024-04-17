@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script>
+      var randomNumber;
+      function GenerateRandomNumber() {
+        randomNumber = Math.floor(Math.random() * 100);
+      }
+
+      function CheckGuess() {
+        var GuessedNumber = document.getElementById("txtInputNumber").value;
+        var Number = parseInt(GuessedNumber);
+
+        if (randomNumber == Number) {
+          document.getElementById(
+            "show-result"
+          ).innerHTML = `<br<br><h1> ${Number} <br> Correct Guess</h1>`.fontcolor('green');
+          document.getElementById("txtInputNumber").value = "";
+        } 
+        else if (Number > randomNumber  ) {
+          document.getElementById(
+            "show-result"
+          ).innerHTML = `<br<br><h1> ${Number} <br> is Overvalued </h1>`.fontcolor('red');
+          document.getElementById("txtInputNumber").value = "";
+        } 
+        else {
+          document.getElementById(
+            "show-result"
+          ).innerHTML = `<br<br> <h1> ${Number} <br> is UnderValued </h1>`;
+          document.getElementById("txtInputNumber").value = "";
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: chartreuse;
+        padding: 10em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .board-body {
+        background-color: black;
+        color: white;
+        width: 20em;
+        max-height: 20em;
+        border-radius: 1em;
+        padding: 1em;
+        border: 1px solid black;
+        text-align: center;
+      }
+      #show-result {
+        height: 10em;
+        width: 17em;
+        border: 1px solid black;
+        background-color: white;
+        margin: 0.5em;
+        color: black;
+      }
+    </style>
+  </head>
+  <body onload="GenerateRandomNumber()">
+    <div class="board-body">
+      <h2>Guess Your Number</h2>
+
+      <div id="show-result" class="pt-3" >number between 0 -100 </div>
+
+      <div class="input-group">
+        <button class="btn btn-warning" onclick="GenerateRandomNumber()">
+          Play Again</button
+        ><input
+          type="text"
+          name=""
+          id="txtInputNumber"
+          placeholder="Number"
+          class="form-control"
+        /><button class="btn btn-primary" onclick="CheckGuess()">Guess</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -53,6 +53,10 @@ p {
 body {
   background-color: var(--bg);
 }
+.btnContact{
+  width: 50%;
+  font-size:2vw;
+}
 /* ************************************
 navigation bar starts here
 ************************************ */
@@ -279,6 +283,7 @@ latest-work section starts here
 .overlay a {
   color: white;
   text-decoration: none;
+  font-size: 3vw;
 }
 
 /* button toggle section starts here   */
@@ -567,7 +572,7 @@ footer p {
   .section-services p {
     font-size: 3vw;
   }
-    /* headre section  */
+    /* header section  */
 
   .header-nav-ul {
     display: none;
@@ -592,6 +597,8 @@ footer p {
   .service-box {
     margin: 0 auto;
   }
+  /* latest data  */
+
   /* education data section  */
   .section-education .grid-two-columns{
     column-gap:2rem;
@@ -618,5 +625,9 @@ footer p {
     display: grid;
     grid-template-columns: repeat(1,1fr);
     grid-template-rows: repeat(4,1fr);
+  }
+  /* scroll top  */
+  .scroll-top{
+    left: 85%;
   }
 }
