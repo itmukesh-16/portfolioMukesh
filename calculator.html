@@ -1,0 +1,113 @@
+<!-- 
+Title  : Simple Calculator
+Auther : Mukesh Gouda
+Date   : 12-1-2023 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        var inputString="";
+        var operands;
+        var result;
+
+        function inputTake(input){
+            inputString += input;
+            document.getElementById("txtInput").value=inputString;
+        }
+        function calculateResult(inputString){
+            result=eval(inputString);
+            document.getElementById("txtInput").value=result;  
+        }
+        function showResult(){
+            calculateResult(inputString);
+        }
+        function btnClear()
+        {
+        inputString ="";
+        document.getElementById("txtInput").value=inputString;
+        }
+    </script>
+    <style>
+        .calculator-body{
+            background-color: black;
+            border-radius: 1em;
+            width:30em;
+            max-height:30em;
+            margin:auto;
+            margin-top:5em;
+        }
+        input[type=text]{
+            height: 5em;
+            font-size: 1.5em;
+        }
+        button{
+            width: 4.8em;
+            height: 3.5em;
+            margin: 0;
+            border-radius: 1em;
+            border: 1px solid;
+            font-size: large;
+            font-family: arial;
+            font-weight: bold;
+        }
+        .btnNum{
+            background-color: rgb(78, 115, 224);
+        }
+        .btnResult{
+            background-color: rgb(45, 225, 45)class="btnFunction";
+        }
+        .btnCAL{
+            background-color: red;
+        }
+        .btnFunction{
+            background-color: rgb(215, 200, 35);
+        }
+        .btnResult{
+            background-color: green;
+        }
+        .operator{
+            width: 6.1em;
+        }
+    </style>
+</head>
+<body class="container-fluid" style="justify-content:center;align-items:center;background-color: rgb(105, 105, 167);"> 
+     
+ <div class="calculator-body p-3">
+    <div class="row">
+        <div><input type="text" class="form-control" placeholder="Simple Calculator" id="txtInput"></div>
+    </div>
+    <div class="row ">
+        <div class="row mt-3">
+            <div class="col"><button onclick="inputTake(1)"  class="btnNum">1</button> </div>
+            <div class="col"><button onclick="inputTake(2)"  class="btnNum">2</button> </div>
+            <div class="col"><button onclick="inputTake(3)"  class="btnNum">3</button> </div>
+            <div class="col"><button onclick="btnClear()"    class="btnCAL">CAL</button> </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col"><button onclick="inputTake(4)" class="btnNum">4</button> </div>
+            <div class="col"><button onclick="inputTake(5)" class="btnNum">5</button> </div>
+            <div class="col"><button onclick="inputTake(6)" class="btnNum">6</button> </div>
+            <div class="col"><button onclick="inputTake('+')"  class="btnFunction">+</button> </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col"><button onclick="inputTake(7)" class="btnNum">7</button> </div>
+            <div class="col"><button onclick="inputTake(8)" class="btnNum">8</button> </div>
+            <div class="col"><button onclick="inputTake(9)" class="btnNum">9</button> </div>
+            <div class="col"><button onclick="inputTake('-')" class="btnFunction">--</button> </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col"><button onclick="inputTake(0)" class="btnNum">0</button> </div>
+            <div class="col"><button onclick="showResult()" class="btnResult">=</button> </div>
+            <div class="col"><button onclick="inputTake('*')" class="btnFunction">X</button> </div>
+            <div class="col"><button onclick="inputTake('/')" class="btnFunction">/</button> </div>
+        </div>   
+    </div>
+ </div>
+</body>
+</html>

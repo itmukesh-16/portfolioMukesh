@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI calculator</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+  <script>
+    function btnCalculate(){
+      var weight=parseFloat(document.getElementById("weight").value);
+      var feet=parseFloat(document.getElementById("feet").value);
+      var inches=parseFloat(document.getElementById("inch").value);
+      var age=parseFloat(document.getElementById("age").value);
+      var bmiResult=0;
+      var meter=feet/3.2808;
+      var inches=inches/39.3700;
+      
+      bmiResult = weight /(Math.pow((meter+inches),2));
+      
+      if(bmiResult<18)
+      {
+        var bmiStatus="You are under weight";
+      }
+      else if(bmiResult>18 && bmiResult<25){
+        var bmiStatus="you are fit";
+      }
+      else{
+        var bmiStatus="you are overweight";
+      }
+
+      document.getElementById("result").innerHTML="your bmi : <b>"+bmiResult +" </b><br> you are : <b>"+ bmiStatus +"</b>";
+    }
+  </script>
+</head>
+<body class="container-fluid">
+  
+<div class="row">
+
+  <div class="col d-flex">
+     <img src="./public/images/bmi-logo.png" alt="">
+    <div style="display: flex;flex-direction: column;">
+      <span style="color: orange; font-size:5em;">BMI calculator</span>
+      <span style="color: orange; font-size:2em;">Body mass Index</span>
+    </div>
+  </div>
+
+  <div class="row">
+ <div class="col p-5">
+
+  <dl>
+    <dt>  GENDER:</dt>
+    <dd>
+      <input type="radio" name="gender" id="optMale" > Male &nbsp;&nbsp;&nbsp;
+      <input type="radio" name="gender" id="optFemale">Female
+    </dd>
+  </dl>
+
+  <dl class="mt-5">
+    <dt>HEIGHT:</dt>
+    <dd>
+      <input type="text" placeholder="ft" name="feet" id="feet" style="border-top:none;border-left: none;border-right: none;outline: none;">
+      <input type="text" placeholder="in" name="inches" id="inch" style="border-top:none;border-left: none;border-right: none;outline: none;">
+    </dd>
+  </dl>
+
+ </div>
+ <div class="col p-5">
+
+  <dl>
+    <dt> AGE:</dt>
+    <dd>
+      <input type="text" placeholder="                                 Years" id="age" style="border-top:none;border-left: none;border-right: none;outline: none;">between 2 yrs to 120 yrs 
+    </dd>
+  </dl>
+
+  <dl class="mt-5">
+    <dt>WEIGHT:</dt>
+    <dd>
+      <input type="text" placeholder="kg" name="weight" id="weight" style="border-top:none;border-left: none;border-right: none;outline: none;">
+    </dd>
+  </dl>
+
+ </div>
+<div class="col bg-warning">
+    <div class="p-5 fs-5" style="justify-content: center;align-items: center;" id="result"></div>
+</div>
+
+  </div>
+  <div class="col d-flex justify-content-center">
+  <button onclick="btnCalculate()" class="btn btn-warning rounded-5" style="width: 10em;">Calculate</button>
+  </div>
+
+</div>
+</body>
+</html>

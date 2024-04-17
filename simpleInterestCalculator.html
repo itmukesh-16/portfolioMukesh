@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpleInterestCalculator</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function calculateSimpleInterest()
+        {
+           var   lender =document.getElementById("moneyLender").value;
+           var  taker =document.getElementById("moneyTaker").value;
+           var  amount =document.getElementById("principleAmount").value;
+           var  time =document.getElementById("timePeriod").value;
+           var  rate =document.getElementById("rateOfInterest").value;
+           var simpleInterest="";
+           
+        amount=parseFloat(amount);
+        time=parseFloat(time);
+        rate=parseFloat(rate);
+
+        simpleInterest=(amount*time*rate)/100;
+       
+           
+        document.getElementById("money-taker").innerHTML=taker;
+        document.getElementById("money-lender").innerHTML=lender;
+        document.getElementById("simple-interest").innerHTML=simpleInterest;
+          
+        }
+    </script>
+</head>
+<body class="container-fluid ">
+   
+        <div class="d-flex justify-content-center">
+            <dl>
+            <h1>Simple Interest Calculator</h1>
+            <dt> Money Lender :</dt>
+            <dd><input type="text" name="" id="moneyLender" class="form-control" ></dd>
+            <dt> Money Taker :</dt>
+            <dd><input type="text" name="" id="moneyTaker" class="form-control" ></dd>
+            <dt> principle amount :</dt>
+            <dd><input type="text" name="" id="principleAmount" class="form-control" ></dd>
+            <dt> Time Period :</dt>
+            <dd><input type="text" name="" id="timePeriod" class="form-control" ></dd>
+            <dt> Rate Of Interest :</dt>
+            <dd><input type="text" name="" id="rateOfInterest" class="form-control" ></dd>
+            <dd><button class="btn btn-primary" onclick="calculateSimpleInterest()">Calculate</button></dd>
+        </dl>
+        </div>
+
+        <div class="p-4 fs-1 " style="justify-content: center;">
+            
+            <p class="bill" id="bill" >
+                Mr/Mrs <span id="money-taker"></span> owes <b><span id="simple-interest"></span> rupes </b> to Mr/Mrs <span id="money-lender"></span>
+            </p>
+        </div>
+
+
+</body>
+</html>
