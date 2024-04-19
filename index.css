@@ -450,7 +450,7 @@ freelancing  section starts here
 /* parralex effect */
 .section-freelancing {
   max-width: 100%;
-  background-image: url("/public/images/free2.avif");
+  background-image: url("./public/images/free2.avif");
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
